@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TheDecider.DecisionPage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="LightGoldenrodYellow">
+            <StackLayout Padding="20,10,20,20" BackgroundColor="Coral">
+                <Label Text="The decider has chosen:" FontSize="Large"/>
+            </StackLayout>
+
+            <StackLayout HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Margin="20,0,20,20">
+                <Frame HeightRequest="300" WidthRequest="300" CornerRadius="30" HorizontalOptions="Start" VerticalOptions="Start" Margin="0" Padding="0" BackgroundColor="Coral">
+                    <Label x:Name="Decision" FontSize="50" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+
+                </Frame>
+            </StackLayout>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

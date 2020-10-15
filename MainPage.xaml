@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" BackgroundColor="Coral" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="TheDecider.MainPage" NavigationPage.HasNavigationBar="False">
+     <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS" Value="0, 40, 0, 40" />
+        </OnPlatform>
+    </ContentPage.Padding>
+    <StackLayout BackgroundColor="Coral">
+        <!-- Place new controls here -->
+       
+        <Label Text="The Decider" HorizontalOptions="CenterAndExpand" FontSize="Title"/>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Padding="0,0,0,30">
+            <Entry x:Name="choice" WidthRequest="300"/>
+            <Button Clicked="AddChoice" Text="Add Choice" CornerRadius="5" BackgroundColor="Aqua" FontSize="Micro"/>
+        </StackLayout>
+
+          <ListView x:Name="ChoicesView" ItemsSource="{Binding Choices}" BackgroundColor="LightGoldenrodYellow" HorizontalOptions="CenterAndExpand">
+            <ListView.ItemTemplate>
+              <DataTemplate>
+                <TextCell Text="{Binding choice}" />
+              </DataTemplate>
+            </ListView.ItemTemplate>
+          </ListView>
+
+        <Button Text="Get Decision" Clicked="GetResult" WidthRequest="250" CornerRadius="5" HorizontalOptions="CenterAndExpand" BackgroundColor="Aqua"/>
+        <Label Text="" x:Name="result" FontSize="Large" HorizontalOptions="CenterAndExpand"/>
+
+    </StackLayout>
+</ContentPage>
